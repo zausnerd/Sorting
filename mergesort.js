@@ -21,8 +21,8 @@ function merge(left, right) {
 }
 
 function split(wholeArray) {
-	if (wholeArray.length === 1)  {
-		return wholeArray
+	if (wholeArray.length < 2)  {
+		return wholeArray;
 	}
 	var middle = Math.floor(wholeArray.length / 2);
 	var firstHalf = wholeArray.slice(0,middle);
@@ -31,6 +31,9 @@ function split(wholeArray) {
 }
 
 function mergeSort(array) {
-	
-
+	if (array.length < 2) {
+		return array;
+	}
+	var arraySplit = split(array);
+	return merge(mergeSort(arraySplit[0]),mergeSort(arraySplit[1]));
 }
