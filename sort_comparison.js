@@ -1,4 +1,4 @@
-for (var i = 9; i <= 12; i++) {
+for (var i = 9; i <= 15; i++) {
   var numItems = Math.pow(2, i);
   var nativeTestArray = [];
 

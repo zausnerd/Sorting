@@ -21,9 +21,6 @@ function merge(left, right) {
 }
 
 function split(wholeArray) {
-	if (wholeArray.length < 2)  {
-		return wholeArray;
-	}
 	var middle = Math.floor(wholeArray.length / 2);
 	var firstHalf = wholeArray.slice(0,middle);
 	var secondHalf = wholeArray.slice(middle);
